@@ -25,4 +25,5 @@ public interface BoardDAO {
 	 * @return BoardVO
 	 */
 	BoardVO selectByNo(int boardNo);
+	
 }
