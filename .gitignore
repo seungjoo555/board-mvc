@@ -1,0 +1,20 @@
+/target/
+
+# Eclipse / STS 설정 파일
+.settings/
+.classpath
+.project
+.factorypath
+
+# 빌드 결과물 (Maven / Gradle)
+target/
+bin/
+build/
+.gradle/
+
+# OS 생성 파일
+.DS_Store
+Thumbs.db
+
+# 기타 민감한 개인 설정 파일 (필요 시 주석 해제)
+# application-secret.properties

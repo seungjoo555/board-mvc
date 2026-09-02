@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.ac.kopo.mapper.MemberMapper">
+
+	<select id="selectById" resultType="memberVO">
+		SELECT id
+			 , name
+			 , password
+			 , email_id AS emailId
+			 , email_domain AS emailDomain
+			 , tel1 || '-' || tel2 || '-' || tel3 AS tel
+			 , post
+			 , basic_addr AS basicAddr
+			 , detail_addr AS detailAddr
+			 , type
+			 , TO_CHAR(reg_date, 'YYYY-MM-DD HH24:MI:SS') AS regDate
+		  FROM TBL_MEMBER
+		 WHERE id = #{id}
+	</select>
+
+</mapper>

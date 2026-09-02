@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	let goRegisterForm = function() {
+		location.href = "member/register"
+	}
+</script>
+</head>
+<body>
+	<h2>전체 회원목록 조회 페이지</h2>
+	<p>
+		<a th:href="@{/}">메인페이지로</a>
+	</p>
+	<table border="1">
+		<tr>
+			<th>아이디</th>
+			<th>이름</th>
+			<th>이메일</th>
+			<th>전화번호</th>
+			<th>우편번호</th>
+			<th>주소</th>
+			<th>상세주소</th>
+			<th>권한</th>
+			<th>회원가입일</th>
+		</tr>
+		<tr th:each="member : ${memberList}">
+			<td>
+				<a th:text="${member.id}" th:href="@{/member/{id} (id=${member.id})}">
+				</a>
+			</td>
+			<td th:text="${member.name}"></td>
+			<td th:text="|${member.emailId}@${member.emailDomain}|"></td>
+			<td th:text="${member.tel}"></td>
+			<td th:text="${member.post}"></td>
+			<td th:text="${member.basicAddr}"></td>
+			<td th:text="${member.detailAddr}"></td>
+			<td th:text="${member.type}"></td>
+			<td th:text="${member.regDate}"></td>
+		</tr>
+	</table>
+	<br>
+	<button onclick="goRegisterForm()">회원 가입</button>
+</body>
+</html>

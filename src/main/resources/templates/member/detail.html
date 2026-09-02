@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>상세회원조회</h2>
+	<hr>
+	<table border="1">
+		<tr>
+			<th>아이디</th>
+			<td th:text="${member.id}"></td>
+		</tr>
+		<tr>
+			<th>이름</th>
+			<td th:text="${member.name}"></td>
+		</tr>
+		<tr>
+			<th>비밀번호</th>
+			<td th:text="${member.password}"></td>
+		</tr>
+		<tr>
+			<th>이메일</th>
+			<td th:text="|${member.emailId}@${member.emailDomain}|"></td>
+		</tr>
+		<tr>
+			<th>전화번호</th>
+			<td th:text="${member.tel}"></td>
+		</tr>
+		<tr>
+			<th>우편번호</th>
+			<td th:text="${member.post}"></td>
+		</tr>
+		<tr>
+			<th>주소</th>
+			<td th:text="${member.basicAddr}"></td>
+		</tr>
+		<tr>
+			<th>상세주소</th>
+			<td th:text="${member.detailAddr}"></td>
+		</tr>
+		<tr>
+			<th>유저타입(권한)</th>
+			<td th:text="${member.type}"></td>
+		</tr>
+		<tr>
+			<th>가입날짜</th>
+			<td th:text="${member.regDate}"></td>
+		</tr>
+	</table>
+</body>
+</html>
