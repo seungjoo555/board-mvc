@@ -1,36 +1,18 @@
 package kr.ac.kopo.member.vo;
 
-import org.hibernate.validator.constraints.Length;
-
-import jakarta.validation.constraints.NotEmpty;
-
 public class MemberVO {
-	
-	@NotEmpty(message = "필수항목입니다")
+
 	private String id;
-	@NotEmpty(message = "필수항목입니다")
 	private String name;
-	@NotEmpty(message = "필수항목입니다")
 	private String password;
-	@NotEmpty(message = "필수항목입니다")
 	private String emailId;
-	@NotEmpty(message = "필수항목입니다")
 	private String emailDomain;
-	@NotEmpty(message = "필수항목입니다")
 	private String tel;
-	@Length(min = 5, max = 5, message = "5자리 입력하세요")
-	@NotEmpty(message = "필수항목입니다")
-	private String post;
-	@NotEmpty(message = "필수항목입니다")
+	private String post;	
 	private String basicAddr;
-	@NotEmpty(message = "필수항목입니다")
 	private String detailAddr;
 	private String type;
 	private String regDate;
-	
-	public MemberVO() {
-		super();
-	}
 	
 	public String getId() {
 		return id;
@@ -100,9 +82,9 @@ public class MemberVO {
 	}
 	@Override
 	public String toString() {
-		return "MemberVO [id=" + id + ", name=" + name + ", password=" + password + ", emailId=" + emailId
-				+ ", emailDomain=" + emailDomain + ", tel=" + tel + ", post="
-				+ post + ", basicAddr=" + basicAddr + ", detailAddr=" + detailAddr + ", type=" + type + ", regDate="
+		return "MemberVO [id=" + id + ", name=" + name + ", password=" + password + ", email=" + emailId
+				+ "@" + emailDomain + ", tel=" + tel + ", post="
+				+ post + ", Addr=" + basicAddr + " " + detailAddr + ", type=" + type + ", regDate="
 				+ regDate + "]";
 	}
 	

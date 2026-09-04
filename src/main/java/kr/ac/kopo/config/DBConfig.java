@@ -16,8 +16,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 @MapperScan("kr.ac.kopo.mapper")
 @PropertySource("classpath:/config/db.properties")
-@ComponentScan(basePackages = {"kr.ac.kopo.board"})
-@ComponentScan(basePackages = {"kr.ac.kopo.member"})
+@ComponentScan(basePackages = {"kr.ac.kopo.board", "kr.ac.kopo.member"})
 @Configuration
 public class DBConfig {
 	

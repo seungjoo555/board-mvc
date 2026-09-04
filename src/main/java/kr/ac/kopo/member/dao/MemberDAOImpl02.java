@@ -33,4 +33,9 @@ public class MemberDAOImpl02 implements MemberDAO {
 	public MemberVO selectById(String memberId) {
 		return memberMapper.selectById(memberId);
 	}
+
+	@Override
+	public MemberVO login(MemberVO loginVO) {
+		return memberMapper.login(loginVO);
+	}
 }

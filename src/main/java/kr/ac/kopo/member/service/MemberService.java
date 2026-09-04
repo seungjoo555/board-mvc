@@ -12,4 +12,6 @@ public interface MemberService {
 	public void registerMember(MemberVO member) throws Exception;
 	
 	MemberVO getMemberByMemberId(String id) throws Exception;
+	
+	MemberVO checkMember(MemberVO member) throws Exception;
 }

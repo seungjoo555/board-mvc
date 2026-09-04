@@ -42,8 +42,18 @@ public class MemberDBTest {
 		}
 	}
 	
+	@Disabled
 	@Test
 	public void 상세회원조회() throws Exception {
 		System.out.println(memberDao.selectById("seungjoo"));
 	}
+	
+	@Test
+	public void 로그인확인() throws Exception {
+		MemberVO loginVO = new MemberVO();
+		loginVO.setId("seungjoo");
+		loginVO.setPassword("1234");
+		System.out.println(memberDao.login(loginVO));
+	}
+	
 }

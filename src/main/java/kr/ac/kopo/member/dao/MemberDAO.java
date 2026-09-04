@@ -22,4 +22,9 @@ public interface MemberDAO {
 	 * 상세회원정보
 	 */
 	MemberVO selectById(String memberId);
+	
+	/**
+	 * 로그인
+	 */
+	MemberVO login(MemberVO loginVO);
 }
